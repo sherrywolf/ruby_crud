@@ -1,7 +1,7 @@
 <%= form_for :book, url: books_path do |f| %>
 
 <% if @book.errors.any? %>
-  <div id="error_explanation">
+  <div class="text-danger">
     <ul>
       <% @book.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>

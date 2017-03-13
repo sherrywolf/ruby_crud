@@ -9,6 +9,17 @@
   </head>
 
   <body>
-    <%= yield %>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+        <%= link_to "BookStorage", { :controller => 'welcome'}, :class => 'navbar-brand'%>
+        <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><%= link_to 'Library', { :controller => 'books'} %></li>
+                </ul>
+        </div>
+
+  </div>
+  <div class="container modal-content">
+       <%= yield %>
+  </div>
   </body>
 </html>
