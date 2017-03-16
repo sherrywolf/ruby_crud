@@ -1,13 +1,27 @@
 <br>
 <%= link_to 'Back', books_path, :class => 'btn btn-default' %>
-<h1><i>"<%= @book.title %>"</i> <%= @book.author %>
+<h1><strong><i>"<%= @book.title %>"</i> <%= @book.author %>
 <%= link_to 'Edit', edit_book_path(@book), :class => 'btn btn-info'  %>
 <%= link_to 'Destroy', book_path(@book),
         method: :delete,
         data: { confirm: 'Do you realy want to delete "' + @book.title + '" ?' }, :class => 'btn btn-danger'  %>
-</h1>
+</strong></h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
+<table class="table">
+  <tr>
+    <td>
+      <% if @book.image_url.blank? %>
+        <%= image_tag('https://images-na.ssl-images-amazon.com/images/I/4148uGcgdEL._SX258_BO1,204,203,200_.jpg', size: '125x200') %>
+      <% else %>
+        <%= image_tag(@book.image_url, size: '125x200') %>
+      <% end %>
+    </td>
+
+    <td class="h4">
+      <p><strong>Year: </strong><%= @book.year %></p>
+      <p><strong>Genre: </strong><%= @book.genre %></p>
+      <p><strong>Pages: </strong><%= @book.numberOfPages %></p>
+      <p><strong>Description: </strong><%= @book.description %></p>
+    </td>
+  </tr>
+</table>

@@ -5997,6 +5997,9 @@ button.close {
   height: 87%;
   overflow-y: scroll;
 }
+.pos{
+  display: flex;
+}
 .cont{
   height: 90vh;
 }

@@ -1,6 +1,23 @@
 <h1>New books:</h1>
+<div class="sc">
 <% @books.each do |book| %>
-    <h3><i><%= link_to '"' + book.title + '"', book_path(book) %></i> <%= book.author %></h3>
-    <h4><%= book.year %></h4>
-    <p><%= book.description %></p>
+    <h3><strong><i><%= link_to '"' + book.title + '"', book_path(book) %></i> <%= book.author %></strong></h3>
+    <table class="table">
+      <tr>
+        <td>
+          <% if book.image_url.blank? %>
+            <%= image_tag('https://images-na.ssl-images-amazon.com/images/I/4148uGcgdEL._SX258_BO1,204,203,200_.jpg', size: '125x200') %>
+          <% else %>
+            <%= image_tag(book.image_url, size: '125x200') %>
+          <% end %>
+        </td>
+        <td class="h4">
+          <p><strong>Year: </strong><%= book.year %></p>
+          <p><strong>Genre: </strong><%= book.genre %></p>
+          <p><strong>Pages: </strong><%= book.numberOfPages %></p>
+          <p><strong>Description: </strong><%= book.description %></p>
+        </td>
+      </tr>
+    </table>
 <% end %>
+</div>
