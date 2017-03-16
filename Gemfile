@@ -49,3 +49,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'better_errors'
+gem 'will_paginate', '~> 3.1.0'
