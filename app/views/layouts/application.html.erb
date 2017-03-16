@@ -10,16 +10,44 @@
 
   <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
-        <%= link_to "BookStorage", { :controller => 'welcome'}, :class => 'navbar-brand'%>
+        <%= link_to "BookStorage", root_path, :class => 'navbar-brand'%>
         <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><%= link_to 'Library', { :controller => 'books'} %></li>
+                    <li><%= link_to 'Library', books_path %></li>
                 </ul>
+                <div class="pull-right">
+                <% if user_signed_in? %>
+                <ul class="navbar-text">
+                    Hi <strong><%= current_user.email %></strong>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'nav navbar-link' %></li>
+                </ul>
+               <ul class="nav navbar-nav">
+                   <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav navbar-link'  %></li>
+               </ul>
+                <% else %>
+                <ul class="nav navbar-nav">
+                    <li><%= link_to "Sign up", new_user_registration_path, :class => 'nav navbar-link'  %></li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li><%= link_to "Login", new_user_session_path, :class => 'nav navbar-link'  %></li>
+                </ul>
+                <% end %>
+              </div>
         </div>
+
   </div>
   <div class="container modal-content" style="background:rgba(255,255,255, 0.6);">
     <div class="cont">
-       <%= yield %>
+      <br>
+      <% if notice %>
+            <p class="alert alert-success"><%= notice %></p>
+            <% end %>
+            <% if alert %>
+            <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+      <%= yield %>
      </div>
   </div>
   </body>

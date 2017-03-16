@@ -1,4 +1,4 @@
-<h1>Books:</h1>
+<h1 class="nav navbar">New Books:</h1>
 <div class="sc">
 <% @books = @b.paginate(:page => params[:page], :per_page => 5) %>
 <% @books.each do |book| %>

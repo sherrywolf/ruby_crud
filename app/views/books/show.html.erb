@@ -1,5 +1,5 @@
 <br>
-<%= link_to 'Back', books_path, :class => 'btn btn-default' %>
+<%= link_to 'Back', :back, :class => 'btn btn-default' %>
 <h1><strong><i>"<%= @book.title %>"</i> <%= @book.author %>
 <%= link_to 'Edit', edit_book_path(@book), :class => 'btn btn-info'  %>
 <%= link_to 'Destroy', book_path(@book),
