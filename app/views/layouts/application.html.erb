@@ -16,10 +16,11 @@
                     <li><%= link_to 'Library', { :controller => 'books'} %></li>
                 </ul>
         </div>
-
   </div>
-  <div class="container modal-content">
+  <div class="container modal-content" style="background:rgba(255,255,255, 0.6);">
+    <div class="cont">
        <%= yield %>
+     </div>
   </div>
   </body>
 </html>

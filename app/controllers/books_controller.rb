@@ -38,10 +38,10 @@ class BooksController < ApplicationController
   @book = Book.find(params[:id])
   @book.destroy
   redirect_to books_path
-end
+  end
 
   private
   def book_params
-    params.require(:book).permit(:title, :description)
+    params.require(:book).permit(:title, :author, :year, :description, :image_url, :numberOfPages, :genre)
   end
 end

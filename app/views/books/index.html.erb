@@ -1,10 +1,9 @@
-
 <h1 class="nav navbar">Library <%= link_to 'Add', new_book_path, :class => 'btn btn-success' %></h1>
 <div class="sc">
 <table class="table">
   <tr>
     <th>Title</th>
-    <th>Description</th>
+    <th>Author</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,12 +12,12 @@
   <% @books.each do |book| %>
     <tr>
       <td ><%= book.title %></td>
-      <td><%= book.description %></td>
+      <td><%= book.author %></td>
       <td><%= link_to 'Details', book_path(book), :class => 'btn btn-default' %></td>
       <td><%= link_to 'Edit', edit_book_path(book), :class => 'btn btn-info' %></td>
       <td><%= link_to 'Delete', book_path(book),
               method: :delete,
-              data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
+              data: { confirm: 'Do you realy want to delete "' + book.title + '" ?' }, :class => 'btn btn-danger' %></td>
     </tr>
   <% end %>
   <tr>
