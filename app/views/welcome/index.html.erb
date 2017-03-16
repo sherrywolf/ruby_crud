@@ -1,6 +1,6 @@
-<h1>New books:</h1>
+<h1>Books:</h1>
 <div class="sc">
-<% @books = Book.paginate(:page => params[:page], :per_page => 5) %>
+<% @books = @b.paginate(:page => params[:page], :per_page => 5) %>
 <% @books.each do |book| %>
     <h3><strong><i><%= link_to '"' + book.title + '"', book_path(book) %></i> <%= book.author %></strong></h3>
     <table class="table">
@@ -24,7 +24,7 @@
 </div>
 <div class="apple_pagination">
     <div class="page_info">
-      <%= page_entries_info @books %>'s
+      <%= page_entries_info @books %>
     </div>
     <%= will_paginate @books, :container => false %>
 </div>
