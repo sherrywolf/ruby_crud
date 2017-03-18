@@ -4,7 +4,7 @@
 |:------------:|:---------:|:-------------:|
 |    2.3.3   |  5.0.2 | SQLite/PostgeSQL |
 
-## Added gems:
+## Gems:
 * will_paginate
 * devise
 * font-awesome-rails
