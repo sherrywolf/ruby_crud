@@ -6,11 +6,23 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <% if ["new", "edit", "show"].include? action_name %>
+    <style>
+    .cont{
+      height: auto;
+    }
+    .sc{
+      overflow-y: hidden;
+    }
+    </style>
+    <% end %>
   </head>
 
   <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
-        <%= link_to "BookStorage", root_path, :class => 'navbar-brand'%>
+        <a class="navbar-brand" href='/'><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; BookStorage</a>
+
         <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><%= link_to 'Library', books_path %></li>
@@ -18,7 +30,7 @@
                 <div class="pull-right">
                 <% if user_signed_in? %>
                 <ul class="navbar-text">
-                    Hi <strong><%= current_user.email %></strong>
+                    <i class="fa fa-user fa-fw"></i> <strong><%= current_user.email %></strong>
                 </ul>
                 <ul class="nav navbar-nav">
                     <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'nav navbar-link' %></li>

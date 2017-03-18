@@ -11,7 +11,7 @@ html {
 }
 body {
   margin: 0;
-  background: #ffffff url("background.jpg") no-repeat;
+  background: #ffffff url("https://raw.githubusercontent.com/sherrywolf/ruby_crud/master/app/assets/images/background.jpg?token=AWE1mL9FbLgK8j431UgNbvlo0SQaXhtGks5Y1RXJwA%3D%3D") no-repeat;
   background-position: bottom;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -5030,10 +5030,19 @@ a.thumbnail.active {
   color: #333;
 }
 .alert {
-  padding: 15px;
-  margin-bottom: 20px;
+  left: 30%;
+  width: 600px;
+  text-align: center;
+  position: absolute;
+  padding: 10px;
   border: 1px solid transparent;
   border-radius: 4px;
+  animation: fadein 5s;
+  opacity: 0;
+}
+@keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
 }
 .alert h4 {
   margin-top: 0;
@@ -5910,7 +5919,6 @@ button.close {
 .modal-content {
   margin-top: 60px;
   margin-bottom: 5px;
-  min-height: 90vh;
   position: relative;
   background-color: #fff;
   -webkit-background-clip: padding-box;
@@ -5991,14 +5999,18 @@ button.close {
   }
 }
 .apple_pagination {
+  text-decoration: none;
   text-align: center;
   padding: 1em;
   cursor: default;}
   .apple_pagination a, .apple_pagination span {
+    text-decoration: none;
     padding: 0.2em 0.3em; }
   .apple_pagination .disabled {
+    text-decoration: none;
     color: #aaaaaa; }
   .apple_pagination .current {
+    text-decoration: none;
     font-style: normal;
     font-weight: bold;
     background-color: #bebebe;
@@ -6014,22 +6026,15 @@ button.close {
     text-decoration: none;
     color: black; }
     .apple_pagination a:hover, .apple_pagination a:focus {
-      text-decoration: underline; }
+      text-decoration: none; }
 .center-t{
   text-align: center;
 }
 .cen{
 
 }
-.sc{
-  height: 73%;
-  overflow-y: scroll;
-}
 .pos{
   display: flex;
-}
-.cont{
-  height: 90vh;
 }
 @media (min-width: 992px) {
   .modal-lg {
@@ -6660,6 +6665,13 @@ button.close {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .sc{
+    height: auto;
+    overflow-y: hidden;
+  }
+  .cont{
+    height: auto;
+  }
   .visible-sm {
     display: block !important;
   }
@@ -6690,6 +6702,13 @@ button.close {
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+  .sc{
+    height: auto;
+    overflow-y: hidden;
+  }
+  .cont{
+    height: auto;
+  }
   .visible-md {
     display: block !important;
   }
@@ -6719,7 +6738,34 @@ button.close {
     display: inline-block !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) and (max-width: 1899px) {
+  .sc{
+    height: 72%;
+    overflow-y: scroll;
+  }
+  .cont{
+    height: 90vh;
+  }
+}
+@media (min-width: 1900px) {
+  .sc{
+    height: auto;
+    overflow-y: hidden;
+  }
+  .cont{
+    height: auto;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1299px) {
+  .sc{
+    height: 66%;
+    overflow-y: scroll;
+  }
+  .cont{
+    height: 90vh;
+  }
+}
+@media (min-width: 1200px){
   .visible-lg {
     display: block !important;
   }
