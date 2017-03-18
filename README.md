@@ -12,5 +12,5 @@
 ## Temat
 	baza ksiązek - BookStorage
 
-##Opis
-    Aplikacja zawiera informacje na temat książek. Ich tytuł, autora, rok wydania, gatunek, opis oraz zdjęcie okładki. Niezalogowany użytkownik może mieć dostęp jedynie do strony głownej oraz strony biblioteki książek jak i szczegółów o danej książce. Zalogowany natomiast może dodawać, edytować i usuwać książki.
+## Opis
+ Aplikacja zawiera informacje na temat książek. Ich tytuł, autora, rok wydania, gatunek, opis oraz zdjęcie okładki. Niezalogowany użytkownik może mieć dostęp jedynie do strony głownej oraz strony biblioteki książek jak i szczegółów o danej książce. Zalogowany natomiast może dodawać, edytować i usuwać książki.
