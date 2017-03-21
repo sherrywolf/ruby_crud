@@ -5,9 +5,9 @@
 |    2.3.3   |  5.0.2 | SQLite/PostgeSQL |
 
 ## Gems:
-* will_paginate
-* devise
-* font-awesome-rails
+* will_paginate - wykorzystane do paginacji
+* devise - rejestracja i logowanie użytkowników
+* font-awesome-rails - wykorzystanie ikon
 
 ## Temat
 	baza ksiązek - BookStorage
@@ -21,7 +21,7 @@ Przechowywane są następujące dane:
  * rok wydania
  * gatunek
  * opis
- * zdjęcie okładki.
+ * link do zdjęcia okładki.
 
 Niezalogowany użytkownik może mieć dostęp jedynie do strony głownej 
 oraz strony biblioteki książek jak i szczegółów o danej książce.
